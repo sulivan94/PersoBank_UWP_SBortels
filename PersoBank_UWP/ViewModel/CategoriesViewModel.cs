@@ -12,7 +12,7 @@ namespace PersoBank_UWP.ViewModel
 {
     public class CategoriesViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        private INavigationService _navigationService;
+        private INavigationService _navigationService; 
         private ObservableCollection<Category> _categories = null;
         private ICommand _editCategoryCommand;
         private ICommand _addCategoryCommand;
