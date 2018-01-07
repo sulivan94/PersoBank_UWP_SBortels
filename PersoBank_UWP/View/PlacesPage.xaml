@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="PersoBank_UWP.View.PlacesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersoBank_UWP.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=PlacesVM}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="placesTitle" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" TextDecorations="Underline" Foreground="DarkSlateGray" />
+        
+        <ListView Grid.Row="1"
+                  ItemsSource="{Binding Places, Mode=TwoWay}" 
+                  ItemTemplate="{StaticResource PlaceTemplate}"
+                  SelectedItem="{Binding SelectedPlace, Mode=TwoWay}"/>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <AppBarButton Icon="Edit" Command="{Binding EditPlaceCommand}"/>
+            <AppBarButton Icon="Add" Command="{Binding AddPlaceCommand}"/>
+            <AppBarButton Icon="Delete" Command="{Binding DeletePlaceCommand}"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>

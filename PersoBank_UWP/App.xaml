@@ -1,0 +1,59 @@
+﻿<Application
+    x:Class="PersoBank_UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersoBank_UWP.Converter"
+    xmlns:vm="using:PersoBank_UWP.ViewModel"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator"/>
+        <local:BoolToReverseBoolConverter x:Key="boolReverserConverter"/>
+        <local:DecimalToStringConverter x:Key="decimalToStringConverter"/>
+        <local:NullValueToSlashConverter x:Key="nullValueToSlashConverter"/>
+        <local:NbDaysToStringConverter x:Key="nbDaysToStringConverter"/>
+        <local:DoubleToNbDaysConverter x:Key="doubleToNbDaysConverter"/>
+        <local:StringToIntConverter x:Key="stringToIntConverter"/>
+
+        <DataTemplate x:Key="CategoryTemplate">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Label}"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="En moyenne :" Width="275"/>
+                    <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="275" Text="{Binding AverageAmount, Converter={StaticResource nullValueToSlashConverter}}"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PlaceTemplate">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name}" Width="275"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding City}" Width="275"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="En moyenne :" Width="275"/>
+                    <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="275" Text="{Binding AverageAmount, Converter={StaticResource nullValueToSlashConverter}}"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ExpenseModelTemplate">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name}"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="En moyenne :" HorizontalAlignment="Left"/>
+                    <TextBlock HorizontalAlignment="Right">
+                        <Run Text="{Binding Average}"/>
+                        <Run Text="€"/>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ComboBoxCategoryTemplate">
+            <TextBlock Text="{Binding Label}"/>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>

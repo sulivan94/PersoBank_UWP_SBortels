@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="addCategoryAverageAmount.Text" xml:space="preserve">
+    <value>Montant moyen</value>
+  </data>
+  <data name="addCategoryCancelButton.Content" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="addCategoryExpenseRadioButton.Content" xml:space="preserve">
+    <value>Dépense</value>
+  </data>
+  <data name="addCategoryIncomeRadioButton.Content" xml:space="preserve">
+    <value>Revenu</value>
+  </data>
+  <data name="addCategoryLabel.Text" xml:space="preserve">
+    <value>Label *</value>
+  </data>
+  <data name="addCategorySaveButton.Content" xml:space="preserve">
+    <value>Sauvergarder</value>
+  </data>
+  <data name="addCategorySuccess" xml:space="preserve">
+    <value>La catégorie "{0}" a été ajoutée avec succès !</value>
+  </data>
+  <data name="addCategoryTitle.Text" xml:space="preserve">
+    <value>Nouvelle catégorie</value>
+  </data>
+  <data name="addCategoryType.Text" xml:space="preserve">
+    <value>Type *</value>
+  </data>
+  <data name="addPlaceAverageAmount.Text" xml:space="preserve">
+    <value>Montant moyen</value>
+  </data>
+  <data name="addPlaceCancelButton.Content" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="addPlaceCategory.Text" xml:space="preserve">
+    <value>Catégorie *</value>
+  </data>
+  <data name="addPlaceCity.Text" xml:space="preserve">
+    <value>Ville *</value>
+  </data>
+  <data name="addPlaceName.Text" xml:space="preserve">
+    <value>Nom *</value>
+  </data>
+  <data name="addPlacePostalCode.Text" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="addPlaceSaveButton.Content" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="addPlaceStreet.Text" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="addPlaceStreetNumber.Text" xml:space="preserve">
+    <value>Numéro</value>
+  </data>
+  <data name="addPlaceSuccess" xml:space="preserve">
+    <value>Le lieu "{0}" a été ajouté avec succès !</value>
+  </data>
+  <data name="addPlaceTitle.Text" xml:space="preserve">
+    <value>Nouveau lieu</value>
+  </data>
+  <data name="apiBadRequest" xml:space="preserve">
+    <value>La requête envoyée au serveur est invalide !</value>
+  </data>
+  <data name="apiDefaultError" xml:space="preserve">
+    <value>Erreur de connexion : {0}</value>
+  </data>
+  <data name="apiInternalServerError" xml:space="preserve">
+    <value>Une erreur interne au serveur s'est produite !</value>
+  </data>
+  <data name="apiNotFound" xml:space="preserve">
+    <value>La ressource n'a pas été trouvée !</value>
+  </data>
+  <data name="apiUnauthorized" xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à effectuer cette opération !</value>
+  </data>
+  <data name="apiUnavailable" xml:space="preserve">
+    <value>Le serveur est temporairement indisponible ou en maintenance !</value>
+  </data>
+  <data name="categoriesTitle.Text" xml:space="preserve">
+    <value>Gestion des catégories</value>
+  </data>
+  <data name="categoryValidationBeetween1And99999Amount" xml:space="preserve">
+    <value>Le montant moyen doit être compris entre 1€ et 99999€ !</value>
+  </data>
+  <data name="categoryValidationEmptyLabel" xml:space="preserve">
+    <value>Introduisez le nom de la nouvelle catégorie !</value>
+  </data>
+  <data name="categoryValidationLengthLabel" xml:space="preserve">
+    <value>Le nom de la catégorie doit contenir entre 4 et 100 caractères !</value>
+  </data>
+  <data name="categoryValidationWrongFormat" xml:space="preserve">
+    <value>Le nom de la catégorie est incorrect !</value>
+  </data>
+  <data name="categoryValidationWrongFormatAmount" xml:space="preserve">
+    <value>Format incorrect pour le montant... N'utilisez que des chiffres et la virgule comme séparateur unité/décimal !</value>
+  </data>
+  <data name="connection.errorTitle" xml:space="preserve">
+    <value>Accès refusé</value>
+  </data>
+  <data name="connectionButton.Content" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="connectionLoginLabel.Text" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="connectionPasswordLabel.Text" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="connectionTitle.Text" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="connectionWrongId" xml:space="preserve">
+    <value>Nom d'utilisateur et/ou mot de passe incorrect(s) !</value>
+  </data>
+  <data name="deletePlaceSuccess" xml:space="preserve">
+    <value>Le lieu "{0}" a été supprimé avec succès !</value>
+  </data>
+  <data name="expensesGestionCategory.Content" xml:space="preserve">
+    <value>Catégorie</value>
+  </data>
+  <data name="expensesGestionPlace.Content" xml:space="preserve">
+    <value>Lieu</value>
+  </data>
+  <data name="expensesGestionPourcent.Text" xml:space="preserve">
+    <value>avec une variation de la moyenne d'au moins</value>
+  </data>
+  <data name="expensesGestionPourcentageError" xml:space="preserve">
+    <value>Choisissez un pourcentage positif !</value>
+  </data>
+  <data name="expensesGestionSearchButton.Content" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="homeBestCategory.Text" xml:space="preserve">
+    <value>Catégorie la plus sollicitée :</value>
+  </data>
+  <data name="homeBestPlace.Text" xml:space="preserve">
+    <value>Lieu le plus fréquenté :</value>
+  </data>
+  <data name="homeButtonAverages.Content" xml:space="preserve">
+    <value>Dépenses moyennes</value>
+  </data>
+  <data name="homeButtonCategories.Content" xml:space="preserve">
+    <value>Gestion des catégories</value>
+  </data>
+  <data name="homeButtonPlaces.Content" xml:space="preserve">
+    <value>Gestion des lieux</value>
+  </data>
+  <data name="homeNewInscriptions.Text" xml:space="preserve">
+    <value>Nouveaux inscrits :</value>
+  </data>
+  <data name="homeRecap.Text" xml:space="preserve">
+    <value>Récapitulatif depuis :</value>
+  </data>
+  <data name="homeTransactions.Text" xml:space="preserve">
+    <value> transactions</value>
+  </data>
+  <data name="homeWelcome.Text" xml:space="preserve">
+    <value>Bienvenue chez PersoBank</value>
+  </data>
+  <data name="loginPasswordValidation" xml:space="preserve">
+    <value>Veuillez saisir votre mot de passe</value>
+  </data>
+  <data name="loginUserNameValidation" xml:space="preserve">
+    <value>Veuillez saisir votre nom d'utilisateur</value>
+  </data>
+  <data name="modifyCategoryAverageAmount.Text" xml:space="preserve">
+    <value>Montant moyen</value>
+  </data>
+  <data name="modifyCategoryCancelButton.Content" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="modifyCategoryExpenseRadioButton.Content" xml:space="preserve">
+    <value>Dépense</value>
+  </data>
+  <data name="modifyCategoryIncomeRadioButton.Content" xml:space="preserve">
+    <value>Revenu</value>
+  </data>
+  <data name="modifyCategoryLabel.Text" xml:space="preserve">
+    <value>Label *</value>
+  </data>
+  <data name="modifyCategoryNbTransactions.Text" xml:space="preserve">
+    <value>Nombre de transactions</value>
+  </data>
+  <data name="modifyCategorySaveButton.Content" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="modifyCategorySuccess" xml:space="preserve">
+    <value>La catégorie "{0}" a été mise à jour !</value>
+  </data>
+  <data name="modifyCategoryTheoreticalAverage.Text" xml:space="preserve">
+    <value>Moyenne théorique</value>
+  </data>
+  <data name="modifyCategoryTitle.Text" xml:space="preserve">
+    <value>Modification d'une catégorie</value>
+  </data>
+  <data name="modifyCategoryTotalAmount.Text" xml:space="preserve">
+    <value>Montant total</value>
+  </data>
+  <data name="modifyCategoryType.Text" xml:space="preserve">
+    <value>Type *</value>
+  </data>
+  <data name="modifyPlaceSuccess" xml:space="preserve">
+    <value>Le lieu "{0}" a été mis à jour !</value>
+  </data>
+  <data name="placesTitle.Text" xml:space="preserve">
+    <value>Gestion des lieux</value>
+  </data>
+  <data name="placeValidationBeetween1000And9999PostalCode" xml:space="preserve">
+    <value>Le code postal doit être compris entre 1000 et 9999 !</value>
+  </data>
+  <data name="placeValidationBeetween1And99999Amount" xml:space="preserve">
+    <value>Le montant moyen doit être compris entre 1€ et 99999€ !</value>
+  </data>
+  <data name="placeValidationBeetween1And9999Number" xml:space="preserve">
+    <value>Le n° de maison doit être compris entre 1 et 9999 !</value>
+  </data>
+  <data name="placeValidationEmptyCategory" xml:space="preserve">
+    <value>Veuillez choisir une catégorie !</value>
+  </data>
+  <data name="placeValidationEmptyCity" xml:space="preserve">
+    <value>Introduisez la localisation du lieu !</value>
+  </data>
+  <data name="placeValidationEmptyName" xml:space="preserve">
+    <value>Introduisez le nom du nouvel établissement !</value>
+  </data>
+  <data name="placeValidationLengthCity" xml:space="preserve">
+    <value>Le nom de la ville doit contenir entre 2 et 100 caractères !</value>
+  </data>
+  <data name="placeValidationLengthName" xml:space="preserve">
+    <value>Le nom de l'établissement doit contenir entre 4 et 100 caractères !</value>
+  </data>
+  <data name="placeValidationLengthStreet" xml:space="preserve">
+    <value>Le nom de rue doit contenir entre 2 et 100 caractères !</value>
+  </data>
+  <data name="placeValidationWrongFormatAmount" xml:space="preserve">
+    <value>Format incorrect pour le montant... N'utilisez que des chiffres et la virgule comme séparateur unité/décimal !</value>
+  </data>
+  <data name="placeValidationWrongFormatCity" xml:space="preserve">
+    <value>Le nom de la ville est incorrect !</value>
+  </data>
+  <data name="placeValidationWrongFormatName" xml:space="preserve">
+    <value>Le nom de l'établissement est incorrect !</value>
+  </data>
+  <data name="placeValidationWrongFormatNumber" xml:space="preserve">
+    <value>Format incorrect pour le n° de maison... N'utilisez que des chiffres !</value>
+  </data>
+  <data name="placeValidationWrongFormatPostalCode" xml:space="preserve">
+    <value>Format incorrect pour le code postal... N'utilisez que des chiffres !</value>
+  </data>
+  <data name="placeValidationWrongFormatStreet" xml:space="preserve">
+    <value>Le nom de rue est incorrect !</value>
+  </data>
+  <data name="updatePlaceCurrentAverage.Text" xml:space="preserve">
+    <value>Moyenne actuelle</value>
+  </data>
+  <data name="updatePlaceNbTransactions.Text" xml:space="preserve">
+    <value>Nombre de transactions</value>
+  </data>
+  <data name="updatePlaceTheoreticalAverage.Text" xml:space="preserve">
+    <value>Moyenne théorique</value>
+  </data>
+  <data name="updatePlaceTitle.Text" xml:space="preserve">
+    <value>Mise à jour du lieu</value>
+  </data>
+  <data name="updatePlaceTotalAmount.Text" xml:space="preserve">
+    <value>Montant total</value>
+  </data>
+  <data name="expensesGestionCategoryError" xml:space="preserve">
+    <value>Aucune catégorie n'a été trouvée !</value>
+  </data>
+  <data name="expensesGestionPlaceError" xml:space="preserve">
+    <value>Aucun lieu n'a été trouvé !</value>
+  </data>
+  <data name="requiredFields.Text" xml:space="preserve">
+    <value>* Champs obligatoires</value>
+  </data>
+</root>

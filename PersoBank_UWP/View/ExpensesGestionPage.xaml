@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="PersoBank_UWP.View.ExpensesGestionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersoBank_UWP.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=ExpensesGestionVM}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="40">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton x:Uid="expensesGestionCategory" Content="" IsChecked="{Binding IsCategory, Mode=TwoWay}"/>
+                <RadioButton x:Uid="expensesGestionPlace" Content="" IsChecked="{Binding IsCategory, Converter={StaticResource boolReverserConverter}, Mode=OneWay}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Uid="expensesGestionPourcent" Text="" Padding="0 5 10 10"/>
+                <TextBox Text="{Binding PourcentageAverageVariation, Mode=TwoWay}" Height="20" Width="50" VerticalAlignment="Top" />
+                <TextBlock Text="%" Margin="5"/>
+            </StackPanel>
+
+
+            <Button x:Uid="expensesGestionSearchButton" Content="" HorizontalAlignment="Center" Margin="5" Command="{Binding ResearchCommand}"/>
+        </StackPanel>
+        
+        <ListView Grid.Row="1"
+                  ItemsSource="{Binding ExpensesModels, Mode=TwoWay}"
+                  ItemTemplate="{StaticResource ExpenseModelTemplate}"
+                  SelectedItem="{Binding SelectedGestionModel, Mode=TwoWay}"/>
+
+        <AppBarButton Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Icon="Edit" Command="{Binding EditModelCommand}"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="PersoBank_UWP.View.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Home}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock x:Uid="homeWelcome" FontSize="30" FontFamily="Comic Sans MS" FontStyle="Italic" FontWeight="Bold" Text="" Margin="0 50 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" TextDecorations="Underline" Foreground="IndianRed" />
+            <Button x:Uid="homeButtonCategories" Content="" Background="CornflowerBlue" Margin="0 40 0 0" Width="250" HorizontalAlignment="Center" Command="{Binding GoToCategoriesPageCommand}"/>
+            <Button x:Uid="homeButtonPlaces" Content="" Background="CornflowerBlue" Margin="0 15 0 0" Width="250" HorizontalAlignment="Center" Command="{Binding GoToPlacesPageCommand}"/>
+            <Button x:Uid="homeButtonAverages" Content="" Background="CornflowerBlue" Margin="0 15 0 0" Width="250" HorizontalAlignment="Center" Command="{Binding GoToUpdateAveragePageCommand}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <TextBlock x:Uid="homeRecap" Width="200" FontFamily="Comic Sans MS" FontSize="18" Foreground="IndianRed" />
+                <ComboBox Width="150"
+                      ItemsSource="{Binding NbDays, Mode=OneWay}"
+                      SelectedItem="{Binding NbDaysSelected, Converter={StaticResource doubleToNbDaysConverter}, Mode=TwoWay}">
+
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource nbDaysToStringConverter}, Mode=TwoWay}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="50 20 0 0">
+                <TextBlock x:Uid="homeNewInscriptions" Text="" TextDecorations="Underline"/>
+                <TextBlock Text="{Binding NbLastRegistered, Mode=OneWay}" Margin="10 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="50 20 0 0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Uid="homeBestCategory" Text="" TextDecorations="Underline"/>
+                    <TextBlock Text="{Binding BestCategory.Label, Mode=OneWay}" Margin="50 0 0 0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>
+                        <Run Text="{Binding BestCategory.NbTransactions, Mode=OneWay}"/>
+                        <Run x:Uid="homeTransactions" Text=""/>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="50 20 0 0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Uid="homeBestPlace" Text="" TextDecorations="Underline"/>
+                    <TextBlock Text="{Binding BestPlace.Name, Mode=OneWay}" Margin="80 0 0 0" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>
+                        <Run Text="{Binding BestPlace.NbTransactions, Mode=OneWay}"/>
+                        <Run x:Uid="homeTransactions" Text=""/>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

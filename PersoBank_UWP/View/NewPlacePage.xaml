@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="PersoBank_UWP.View.NewPlacePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersoBank_UWP.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=NewPlaceVM}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="40">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Uid="addPlaceTitle" Text="" HorizontalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" TextDecorations="Underline" Foreground="DarkSlateGray"/>
+
+        <TextBlock x:Uid="addPlaceName" Text="" Grid.Row="1" Padding="0 14 0 0"/>
+        <TextBox Text="{Binding NewPlace.Name, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlaceAverageAmount" Text="" Grid.Row="2" Padding="0 14 0 0"/>
+        <TextBox Text="{Binding NewPlace.AverageAmount, Converter={StaticResource decimalToStringConverter}, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlaceStreet" Text="" Grid.Row="3" Padding="0 14 0 0"/>
+        <TextBox Text="{Binding NewPlace.Street, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlaceStreetNumber" Text="" Grid.Row="4" Padding="0 14 0 0"/>
+        <TextBox Text="{Binding NewPlace.StreetNumber, Converter={StaticResource stringToIntConverter}, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlaceCity" Text="" Grid.Row="5" Padding="0 16 0 0"/>
+        <TextBox Text="{Binding NewPlace.City, Mode=TwoWay}" Grid.Row="5" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlacePostalCode" Text="" Grid.Row="6" Padding="0 16 0 0"/>
+        <TextBox Text="{Binding NewPlace.PostalCode, Converter={StaticResource stringToIntConverter}, Mode=TwoWay}" Grid.Row="6" Grid.Column="1" Height="30"/>
+
+        <TextBlock x:Uid="addPlaceCategory" Text="" Grid.Row="7" Padding="0 14 0 0"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" Height="30" Width="290" MaxDropDownHeight="200" Margin="0 10 0 0"
+                  ItemsSource="{Binding Categories}"
+                  ItemTemplate="{StaticResource ComboBoxCategoryTemplate}"
+                  SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"/>
+
+        <TextBlock x:Uid="requiredFields" Text="" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" />
+
+        <Button x:Uid="addPlaceCancelButton" Content="" Command="{Binding ReturnToPlacesPage}" Background="CornflowerBlue" Grid.Row="9" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Margin="0 0 20 0"/>
+        <Button x:Uid="addPlaceSaveButton" Content="" Command="{Binding AddPlaceCommand}" Background="CornflowerBlue" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="200" Margin="20 0 0 0"/>
+
+    </Grid>
+</Page>
